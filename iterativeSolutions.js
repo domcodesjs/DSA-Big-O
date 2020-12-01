@@ -42,21 +42,28 @@ const reverseString = (str) => {
 // reverseString('javascript');
 
 const triangularNumber = (n) => {
-  return n;
-};
+  let result = 1;
 
+  for (let i = 2; i <= n; i++) {
+    result += i;
+  }
+
+  return result;
+};
 //O(n)
 // triangularNumber(5);
 
 const stringSplitter = function (str, del) {
   let arr = [];
   let acc = "";
+
   for (let i = 0; i < str.length; i++) {
     if (str[i] !== del) {
       acc += str[i];
     }
     arr.push(acc);
   }
+
   return arr;
 };
 
